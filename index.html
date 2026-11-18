@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Projektowanie wnętrz i ogrodów Tarnowskie Góry | KP Pure Form</title>
+<meta name="description" content="Pracownia KP Pure Form - Katarzyna Piotrowiak. Projekty wnętrz domów i mieszkań oraz projekty ogrodów: koncepcja, wizualizacje 3D, projekt wykonawczy. Tarnowskie Góry, Śląsk i online. Tel. 608 450 910.">
+<meta name="theme-color" content="#1d1d1b">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="img/hom-800.webp" imagesrcset="img/hom-480.webp 480w, img/hom-800.webp 800w" imagesizes="100vw" media="(max-width:860px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/ho-820.webp" imagesrcset="img/ho-560.webp 560w, img/ho-820.webp 820w, img/ho-1000.webp 1000w" imagesizes="50vw" media="(min-width:861px)" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="fonts/jost-rdzen.woff2" crossorigin>
+<style>
+@font-face{font-family:Jost;font-weight:300 700;font-display:swap;src:url(fonts/jost-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2026,U+20AC}
+@font-face{font-family:Jost;font-weight:300 700;font-display:swap;src:url(fonts/jost-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:"Jost fb";src:local("Arial");size-adjust:97%;ascent-override:104%;descent-override:30%}
+:root{--czern:#1d1d1b;--czern2:#2b2b28;--ziel:#4b6b1e;--ziel2:#3d5a16;--szar:#eef0f1;--linia:#d9dcdf;--mut:#55595e;--hh:64px;--w:min(calc(100vw - 32px),1720px);--pas:min(calc(100vw - 32px),1840px)}
+@media (min-width:861px){:root{--hh:84px;--w:min(92vw,1720px);--pas:min(calc(100vw - 2*clamp(24px,3vw,56px)),1840px)}}
+@media (min-width:2100px){:root{--hh:96px;--w:min(90vw,2160px);--pas:min(calc(100vw - 2*56px),2300px)}.logo svg{height:68px!important}.logo span{font-size:.95rem!important}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--hh);-webkit-text-size-adjust:100%}
+body{margin:0;font-family:Jost,"Jost fb",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:clamp(17px,.25vw + 15.5px,20px);line-height:1.6;color:var(--czern);background:#fff;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{margin:0;font-weight:400;line-height:1.08;letter-spacing:-.015em}
+h2{font-size:clamp(34px,3.4vw,68px)}
+h3{font-size:clamp(22px,1.5vw,30px);line-height:1.2}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+.wrap{width:var(--w);margin:0 auto}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:8px;z-index:99;background:#fff;padding:8px 12px}
+/* kropka = slonce z logo */
+.kr{display:inline-block;width:.42em;height:.42em;border-radius:50%;background:currentColor;flex:none}
+.btn{display:inline-flex;align-items:center;gap:14px;min-height:56px;padding:0 30px 0 24px;background:var(--czern);color:#fff;font:500 1.04rem/1 Jost,"Jost fb",Arial,sans-serif;letter-spacing:.01em;text-decoration:none;border:0;cursor:pointer;transition:background .2s,color .2s;-webkit-tap-highlight-color:transparent}
+.btn .kr{width:12px;height:12px;background:var(--ziel);transition:transform .25s}
+.btn:hover{background:var(--czern2)}.btn:hover .kr{transform:scale(1.25)}
+.btn.jasny{background:#fff;color:var(--czern)}.btn.jasny:hover{background:#e9ebec}
+.btn:focus-visible,.menu a:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--ziel);outline-offset:3px}
+
+/* naglowek */
+.top{position:sticky;top:0;z-index:50;height:var(--hh);background:#fff;border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
+.top.sc{border-bottom-color:var(--linia);box-shadow:0 6px 20px rgba(29,29,27,.06)}
+.top .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:14px;text-decoration:none;min-width:0}
+.logo svg{height:44px;width:auto;flex:none}
+.logo span{font-size:.8rem;line-height:1.25;color:var(--mut);white-space:nowrap}
+@media (min-width:861px){.logo svg{height:58px}.logo span{font-size:.86rem}}
+.menu{display:flex;align-items:center;gap:clamp(16px,1.7vw,38px)}
+.menu a{text-decoration:none;font-size:1rem;position:relative;padding:6px 0}
+.menu a:not(.btn)::after{content:"";position:absolute;left:50%;bottom:-4px;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:var(--ziel);opacity:0;transition:opacity .2s}
+.menu a.on::after,.menu a:not(.btn):hover::after{opacity:1}
+.menu .tel{font-weight:500;white-space:nowrap}
+.menu .btn{min-height:48px;padding:0 22px 0 18px}
+.ikt,.burger{display:none}
+@media (max-width:1260px){.menu .tel{display:none}}
+@media (max-width:1080px){
+  .menu{position:fixed;inset:var(--hh) 0 auto 0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:6px 16px 22px;border-top:1px solid var(--linia);box-shadow:0 22px 34px rgba(29,29,27,.14);transform:translateY(-8px);opacity:0;visibility:hidden;transition:.2s}
+  .top.open .menu{transform:none;opacity:1;visibility:visible}
+  .menu a{padding:15px 2px;border-bottom:1px solid var(--szar);font-size:1.12rem}
+  .menu a:not(.btn)::after{left:auto;right:6px;top:50%;bottom:auto;margin:-3px 0 0}
+  .menu .tel{display:block}
+  .menu .btn{margin-top:18px;justify-content:center;min-height:54px}
+  .ikt{display:inline-grid;place-items:center;width:44px;height:44px;margin-left:auto;color:var(--czern)}
+  .ikt svg{width:22px;height:22px}
+  .burger{display:inline-grid;place-items:center;width:44px;height:44px;border:0;background:var(--czern);cursor:pointer;padding:0}
+  .burger span,.burger span::before,.burger span::after{display:block;width:20px;height:2px;background:#fff;position:relative;transition:.2s}
+  .burger span::before,.burger span::after{content:"";position:absolute;left:0}
+  .burger span::before{top:-6px}.burger span::after{top:6px}
+  .top.open .burger span{background:transparent}
+  .top.open .burger span::before{top:0;transform:rotate(45deg)}
+  .top.open .burger span::after{top:0;transform:rotate(-45deg)}
+}
+
+/* pierwszy ekran: wnetrze | ogrod, prog i slonce */
+.hero{position:relative;display:grid;min-height:calc(100svh - var(--hh));background:var(--czern);color:#fff;overflow:hidden}
+.foty{grid-area:1/1;display:grid;grid-template-columns:1fr 1fr;gap:2px;background:#fff}
+.pol{position:relative;overflow:hidden;background:#3a3a36}
+.pol img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pol.w img{object-position:40% 50%}
+.pol.o img{object-position:50% 60%}
+.etk{position:absolute;z-index:3;top:clamp(18px,3vh,34px);display:inline-flex;align-items:center;gap:10px;padding:9px 16px 9px 13px;background:rgba(255,255,255,.94);color:var(--czern);font-size:.95rem;text-decoration:none;transition:background .2s}
+.etk:hover{background:#fff}
+.pol.w .etk{left:clamp(16px,2.4vw,40px)}
+.pol.o .etk{right:clamp(16px,2.4vw,40px)}
+.etk .kr{width:9px;height:9px}
+.pol.o .etk .kr{background:var(--ziel)}
+.hero::after{content:"";grid-area:1/1;z-index:1;pointer-events:none;background:linear-gradient(0deg,rgba(22,22,20,.9) 0%,rgba(22,22,20,.72) 24%,rgba(22,22,20,.18) 52%,rgba(22,22,20,0) 66%)}
+.hero-in{grid-area:1/1;position:relative;z-index:2;align-self:end;justify-self:center;width:var(--w);display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 0 clamp(36px,6.5vh,84px)}
+.slonce{position:relative;width:20px;height:20px;border-radius:50%;background:#fff;margin-bottom:clamp(18px,3vh,30px)}
+.slonce::before{content:"";position:absolute;left:9px;bottom:100%;width:2px;height:100vh;background:#fff}
+.hero h1{font-size:clamp(40px,4.3vw,90px);max-width:17ch;font-weight:400}
+.hero .opis{font-size:clamp(17px,1.15vw,22px);line-height:1.5;max-width:46ch;margin-top:clamp(16px,2.2vh,24px);color:#eceeef}
+.hero .btn{margin-top:clamp(26px,3.6vh,40px)}
+@media (max-height:820px) and (min-width:861px){.hero h1{font-size:clamp(38px,3.7vw,70px)}}
+@media (max-width:860px){
+  .hero{display:flex;flex-direction:column}
+  .foty{flex:1 1 auto;grid-template-columns:none;grid-template-rows:1fr 1fr;min-height:min(92vw,38svh)}
+  .pol.w img{object-position:30% 55%}
+  .pol.o img{object-position:45% 70%}
+  .etk{top:auto;bottom:12px;font-size:.88rem;padding:7px 13px 7px 11px}
+  .pol.w .etk{left:12px}.pol.o .etk{left:12px;right:auto;top:12px;bottom:auto}
+  .hero::after{display:none}
+  .hero-in{flex:0 0 auto;width:100%;padding:0 16px 26px;align-items:flex-start;text-align:left}
+  .foty{position:relative}
+  .foty::after{content:"";position:absolute;left:50%;top:50%;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:#fff;z-index:2}
+  .slonce{display:none}
+  .hero h1{font-size:clamp(31px,8.6vw,42px);max-width:none;padding-top:24px}
+  .hero .opis{font-size:16px;margin-top:12px}
+  .hero .btn{margin-top:24px}
+}
+@media (max-width:860px) and (max-height:700px){.hero h1{font-size:clamp(28px,7.9vw,34px);padding-top:20px}.hero .opis{font-size:15px;line-height:1.45}}
+
+/* sekcje */
+.sek{padding:clamp(56px,8vw,140px) 0}
+.sek.szary{background:var(--szar)}
+.glowa{display:flex;align-items:flex-end;justify-content:space-between;gap:22px 48px;flex-wrap:wrap;margin-bottom:clamp(30px,3.2vw,56px)}
+.glowa p{max-width:60ch;color:var(--mut);margin-top:16px}
+.lead{max-width:62ch;color:var(--mut);margin-top:16px}
+
+/* dwie galezie */
+.galezie{display:grid;grid-template-columns:minmax(0,1fr) 2px minmax(0,1fr);gap:0 clamp(28px,3.6vw,72px);margin-top:clamp(34px,4vw,64px)}
+.prog{position:relative;background:var(--czern)}
+.prog::after{content:"";position:absolute;top:0;left:-10px;width:22px;height:22px;border-radius:50%;background:var(--czern)}
+.gal .foto{display:block;position:relative;aspect-ratio:3/2;overflow:hidden;background:var(--szar)}
+.gal .foto img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.gal .foto:hover img{transform:scale(1.03)}
+.gal h3{font-size:clamp(38px,3.6vw,72px);line-height:1;margin-top:clamp(22px,2.4vw,36px);display:flex;align-items:center;gap:18px}
+.gal h3 .kr{width:16px;height:16px}
+.gal.o h3 .kr{background:var(--ziel)}
+.gal p{margin-top:14px;max-width:52ch;color:var(--mut)}
+.kropki li{position:relative;padding:9px 0 9px 22px;border-top:1px solid var(--linia)}
+.kropki li:last-child{border-bottom:1px solid var(--linia)}
+.kropki li::before{content:"";position:absolute;left:2px;top:1.05em;width:7px;height:7px;border-radius:50%;background:var(--czern)}
+.gal .kropki{margin-top:22px}
+.gal.o .kropki li::before{background:var(--ziel)}
+.dalej{display:inline-flex;align-items:center;gap:12px;margin-top:22px;font-weight:500;text-decoration:none;border-bottom:2px solid currentColor;padding-bottom:3px}
+.gal.o .dalej{color:var(--ziel)}
+@media (max-width:860px){
+  .galezie{grid-template-columns:minmax(0,1fr);gap:0}
+  .gal .foto{aspect-ratio:16/10}
+  .prog{height:2px;margin:40px 0}
+  .prog::after{top:-10px;left:50%;margin-left:-11px}
+}
+
+/* projekty - pas kart */
+.pas{width:var(--pas);margin:0 auto}
+.strz{display:flex;gap:8px}
+.strz button{width:54px;height:54px;border:1.5px solid var(--czern);background:transparent;color:var(--czern);cursor:pointer;display:grid;place-items:center;transition:.2s}
+.strz button:hover:not(:disabled){background:var(--czern);color:#fff}
+.strz button:disabled{opacity:.28;cursor:default}
+.strz svg{width:20px;height:20px}
+.tor{display:grid;grid-auto-flow:column;grid-auto-columns:84%;gap:clamp(14px,1.4vw,26px);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.tor::-webkit-scrollbar{display:none}
+.tor.drag{scroll-snap-type:none;cursor:grabbing;user-select:none}
+.tor>*{scroll-snap-align:start;min-width:0}
+@media (min-width:700px){.tor{grid-auto-columns:calc((100% - 1*26px)/1.45)}}
+@media (min-width:1000px){.tor{grid-auto-columns:calc((100% - 2*24px)/2.35)}}
+@media (min-width:1280px){.tor{grid-auto-columns:calc((100% - 2*24px)/3)}}
+@media (min-width:1700px){.tor{grid-auto-columns:calc((100% - 3*26px)/4)}}
+.kar{background:#fff}
+.slajdy{position:relative;display:grid;grid-auto-flow:column;grid-auto-columns:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;aspect-ratio:4/3;background:#dfe2e4}
+.slajdy::-webkit-scrollbar{display:none}
+.slajdy.drag{scroll-snap-type:none;cursor:grabbing}
+.slajdy button{all:unset;display:block;scroll-snap-align:start;cursor:zoom-in;position:relative}
+.slajdy img{width:100%;height:100%;object-fit:cover}
+.okno{position:relative}
+.okno .nr{position:absolute;right:12px;bottom:12px;z-index:2;background:rgba(29,29,27,.78);color:#fff;font-size:.82rem;line-height:1;padding:7px 10px;pointer-events:none}
+.okno .pk{position:absolute;top:50%;z-index:2;width:44px;height:44px;margin-top:-22px;border:0;background:rgba(255,255,255,.92);color:var(--czern);cursor:pointer;display:grid;place-items:center;opacity:0;transition:opacity .2s}
+.okno .pk svg{width:18px;height:18px}
+.okno .pk.l{left:10px}.okno .pk.p{right:10px}
+.okno:hover .pk:not(:disabled),.okno .pk:focus-visible{opacity:1}
+.okno .pk:disabled{opacity:0!important;pointer-events:none}
+@media (hover:none){.okno .pk{display:none}}
+.kar .opis{padding:18px 20px 22px;display:flex;flex-direction:column;gap:6px}
+.kar h3{font-size:clamp(20px,1.25vw,25px)}
+.kar .typ{display:flex;align-items:center;gap:9px;color:var(--mut);font-size:.95rem}
+.kar .typ .kr{width:8px;height:8px}
+.kar.ogrod .typ .kr{background:var(--ziel)}
+.uw{margin-top:22px;color:var(--mut);font-size:.92rem}
+
+/* mocna sekcja */
+.ciemna{background:var(--czern);color:#fff;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:stretch}
+.ciemna .foto{position:relative;min-height:420px}
+.ciemna .foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ciemna .tekst{padding:clamp(56px,7vw,130px) clamp(20px,5vw,110px);display:flex;flex-direction:column;justify-content:center}
+.ciemna blockquote{margin:0;font-size:clamp(32px,3.1vw,62px);line-height:1.12;letter-spacing:-.015em;max-width:16ch}
+.ciemna .slow{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-top:clamp(26px,3vw,42px);font-size:clamp(18px,1.3vw,24px)}
+.ciemna .slow .kr{width:9px;height:9px;background:#fff}
+.ciemna .slow .kr.z{background:#8fb04f}
+.ciemna p{color:#d4d6d7;margin-top:22px;max-width:58ch}
+.ciemna .podpis{margin-top:30px;color:#fff;font-weight:500}
+.ciemna .podpis small{display:block;font-weight:400;color:#b9bcbe;font-size:.9rem}
+@media (max-width:860px){.ciemna{grid-template-columns:minmax(0,1fr)}.ciemna .foto{min-height:0;aspect-ratio:16/10}.ciemna .tekst{padding:52px 16px 60px}}
+
+/* oferta */
+.oferta{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(34px,5vw,110px)}
+.kol>h3{font-size:clamp(30px,2.4vw,46px);display:flex;align-items:center;gap:16px;padding-bottom:20px;border-bottom:2px solid var(--czern)}
+.kol>h3 .kr{width:14px;height:14px}
+.kol.o>h3{border-color:var(--ziel)}.kol.o>h3 .kr{background:var(--ziel)}
+.zakres{padding:28px 0 6px}
+.zakres+.zakres{border-top:1px solid var(--linia)}
+.zakres h4{margin:0;font-size:clamp(19px,1.25vw,24px);font-weight:500}
+.zakres .dla{color:var(--mut);margin-top:8px;max-width:60ch}
+.zakres .kropki{margin-top:16px}
+.zakres .kropki li{border:0;padding:5px 0 5px 22px}
+.zakres .kropki li:last-child{border:0}
+.kol.o .kropki li::before{background:var(--ziel)}
+.inf{margin-top:20px;padding-top:18px;border-top:1px solid var(--linia);color:var(--mut);font-size:.95rem}
+@media (max-width:860px){.oferta{grid-template-columns:minmax(0,1fr)}}
+
+/* wspolpraca */
+.etapy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 clamp(28px,3vw,60px);counter-reset:e}
+.etapy li{counter-increment:e;padding:24px 0 26px;border-top:1px solid #cfd3d6}
+.etapy h3{font-size:clamp(20px,1.3vw,26px);display:flex;gap:12px;align-items:baseline}
+.etapy h3::before{content:counter(e) ".";color:var(--ziel);font-weight:500}
+.etapy p{margin-top:10px;color:var(--mut);max-width:48ch}
+.fakty{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px clamp(28px,3vw,60px);margin-top:clamp(28px,3vw,48px);padding-top:28px;border-top:2px solid var(--czern)}
+.fakty p{display:flex;gap:14px;align-items:baseline}
+.fakty .kr{width:10px;height:10px;transform:translateY(-1px)}
+@media (max-width:1000px){.etapy{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.etapy,.fakty{grid-template-columns:minmax(0,1fr)}}
+
+/* kontakt */
+.kontakt{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(36px,5vw,110px);align-items:start}
+.dane{margin-top:30px;display:grid;gap:14px}
+.dane a,.dane span{display:inline-flex;align-items:center;gap:14px;text-decoration:none;font-size:clamp(19px,1.35vw,26px)}
+.dane svg{width:22px;height:22px;flex:none}
+.dane a:hover{color:var(--ziel)}
+.wycena{margin-top:36px}
+.wycena h3{font-size:clamp(19px,1.2vw,23px);font-weight:500}
+.wycena .kropki{margin-top:14px}
+.obszar{margin-top:26px;color:var(--mut);max-width:58ch}
+form{background:var(--szar);padding:clamp(22px,3vw,48px)}
+form h3{font-size:clamp(24px,1.7vw,32px)}
+.pola{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:22px}
+.pola .cala{grid-column:1/-1}
+label{display:block;font-size:.92rem;margin-bottom:6px}
+input,textarea{width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1px solid #c6cacd;background:#fff;color:var(--czern);border-radius:0}
+textarea{min-height:130px;resize:vertical}
+input:focus,textarea:focus{outline:2px solid var(--ziel);outline-offset:0;border-color:var(--ziel)}
+[aria-invalid="true"]{border-color:#b3261e}
+.wybor{display:flex;flex-wrap:wrap;gap:8px}
+.wybor label{margin:0;cursor:pointer}
+.wybor input{position:absolute;opacity:0;width:1px;height:1px}
+.wybor span{display:inline-flex;align-items:center;gap:9px;min-height:44px;padding:0 16px;border:1px solid #c6cacd;background:#fff;font-size:.98rem}
+.wybor span::before{content:"";width:9px;height:9px;border-radius:50%;border:1.5px solid var(--czern)}
+.wybor input:checked+span{border-color:var(--czern);background:var(--czern);color:#fff}
+.wybor input:checked+span::before{background:#fff;border-color:#fff}
+.wybor input:focus-visible+span{outline:3px solid var(--ziel);outline-offset:2px}
+.zgoda{display:flex;gap:12px;align-items:flex-start;font-size:.9rem;color:var(--mut);margin-top:4px}
+.zgoda input{width:20px;height:20px;flex:none;margin-top:2px;accent-color:var(--czern)}
+form .btn{margin-top:22px}
+.pokaz{margin-top:14px;font-size:.86rem;color:var(--mut)}
+.ok{margin-top:16px;padding:14px 16px;background:#fff;border-left:4px solid var(--ziel)}
+@media (max-width:960px){.kontakt{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:520px){.pola{grid-template-columns:minmax(0,1fr)}}
+
+/* stopka */
+.stopka{background:var(--szar);padding:clamp(48px,5vw,80px) 0 0;font-size:.95rem}
+.st{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:28px 40px}
+.st svg.lg{height:74px;width:auto}
+.st h4{margin:0 0 12px;font-size:1rem;font-weight:500}
+.st ul li{padding:3px 0}
+.st a{text-decoration:none}.st a:hover{color:var(--ziel)}
+.st p{color:var(--mut);margin-top:14px;max-width:34ch}
+.dol{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 24px;margin-top:clamp(36px,4vw,60px);padding:20px 0 24px;border-top:1px solid #cfd3d6;color:var(--mut);font-size:.9rem;line-height:1.4}
+.dol .wylinka-badge{font-size:1em;line-height:1.4}
+.dol .wylinka-badge svg{width:1.15em;height:1.15em}
+@media (max-width:900px){.st{grid-template-columns:1fr 1fr}.st .pierw{grid-column:1/-1}}
+
+/* pasek na telefonie */
+.mob{position:fixed;left:0;right:0;bottom:0;z-index:40;display:none;grid-template-columns:1fr 1.3fr;background:#fff;border-top:1px solid var(--linia);transform:translateY(100%);transition:transform .25s}
+.mob a{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;text-decoration:none;font-weight:500}
+.mob a+a{background:var(--czern);color:#fff}
+.mob a+a .kr{width:10px;height:10px;background:var(--ziel)}
+.mob svg{width:20px;height:20px}
+@media (max-width:860px){.mob{display:grid}.mob.widac{transform:none}body{padding-bottom:0}.stopka{padding-bottom:56px}}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:90;background:rgba(18,18,17,.95);display:none;align-items:center;justify-content:center;flex-direction:column;padding:56px 12px 20px}
+.lb.otw{display:flex}
+.lb img{max-width:min(96vw,1600px);max-height:calc(100svh - 130px);width:auto;height:auto;object-fit:contain}
+.lb p{color:#e4e6e7;margin-top:14px;text-align:center;font-size:.95rem;padding:0 60px}
+.lb button{position:absolute;border:0;background:#fff;color:var(--czern);width:48px;height:48px;cursor:pointer;display:grid;place-items:center}
+.lb button svg{width:20px;height:20px}
+.lb .x{top:10px;right:10px}
+.lb .p{left:10px;top:50%;margin-top:-24px}.lb .n{right:10px;top:50%;margin-top:-24px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+
+
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="logo" viewBox="0 0 161 247"><path fill="currentColor" fill-rule="evenodd" d="M28.4,191.9 8.5,191.9 7.5,192.6 7.5,238.4 8.2,239.1 14,239.2 14.9,238.8 15.1,238 15.1,199.6 15.8,198.9 16.9,198.6 27.8,198.8 29,198.4 29.4,197.8 29.4,192.6ZM116.4,170.6 116,171.4 116.1,238.6 117.1,239.2 122.2,239.2 122.9,239 123.5,238 123.6,178 124.8,177.2 126.4,177.8 132.4,183.5 133.6,184.1 135.2,184.2 137.4,183.4 143,177.9 143.9,177.4 144.9,177.2 145.9,177.9 146.1,178.6 146.1,238.4 146.5,239 147.1,239.2 152.6,239.2 153.2,239 153.8,238.1 153.8,171.5 153.5,170.9 152.9,170.4 141.9,170.4 140.2,171.2 135.9,175.6 134.5,176 133.5,175.5 129.2,171.2 127.6,170.4 116.9,170.4ZM80.9,170.5 80.2,171.5 80.2,176.1 80.8,177 81.4,177.2 91.1,177.2 93.8,177.9 95.4,179 96.1,180 96.9,181.6 97.4,184.9 97.1,190.6 96.6,192.6 95.5,195.1 93.6,197.6 86.9,204.5 85,207.5 84.5,209.2 84.4,211.9 85.1,215.1 87.2,219.2 98.9,238.6 100,239.2 107.4,239.1 107.6,238.9 107.5,237.8 93,213.9 92.1,211.4 92.2,209.9 92.9,208.6 101.1,199.6 102.5,197.6 103.9,194.8 104.9,190.1 105,182.9 104.6,179.8 103.8,176.9 102.8,175 101.4,173.4 99.9,172.2 97,171 93.1,170.4ZM7.5,171.2 7.5,176.2 8.4,177.1 31.4,177.1 32.2,176.2 32.2,171.4 31.4,170.4 8.4,170.4ZM54.6,169.4 49.9,170.2 47.5,171.4 46.1,172.4 44.5,174 43.2,175.8 42.1,178.1 41.2,181.2 40.8,187.1 40.9,225.2 41.4,228.9 42.8,232.9 44.5,235.6 46.6,237.6 49,239 51.2,239.8 59.9,239.9 62,239.4 64.2,238.4 67.4,235.8 69.6,232.1 70.6,228.9 71.1,225 71.4,214.8 71.1,184.6 70.6,180.8 69.6,177.5 68,174.6 65.8,172.2 64.2,171.2 61.4,170 58.8,169.5ZM54.9,176.5 57.1,176.5 58.9,176.9 59.9,177.4 61.4,178.8 63,182.1 63.6,188 63.8,212.1 63.4,225.2 63,227.5 61.8,230.4 59.6,232.4 57.2,233.1 54.8,233.1 53.1,232.8 51.5,231.8 50.2,230.4 48.9,227 48.4,221.2 48.2,194.5 48.8,183.4 49.4,181 50.6,178.8 52.8,177ZM128.5,110.2 127.8,111.4 127.8,156.2 128,157 128.6,157.5 153,157.4 153.6,156.5 153.6,151.6 152.8,150.8 137,150.8 136.1,150.5 135.4,149.5 135.5,117.8 136.4,117 149,116.9 149.8,116.1 149.6,110.8 149,110.2 148.2,110.1ZM8.5,88.9 7.6,89.1 7.1,90.1 7.1,94.6 7.6,95.6 8.4,95.9 19.8,95.9 21.2,96.2 22.9,97.2 23.9,98.5 24.5,100.1 24.9,102.4 24.6,109.4 23.8,112.5 22.8,114.5 19.5,118.8 14.2,124 12.1,126.5 10,130 8.9,133.6 8.5,137.2 8.6,157.1 9.4,157.8 14.8,157.9 15.6,157.6 16.1,156.8 16.1,137.1 16.6,134 18.5,130.2 27.5,120.6 29.1,118.4 30.6,115.6 31.6,112.8 32.2,109.4 32.6,104.4 32.5,100.9 31.9,96.9 30.6,93.8 29.1,91.9 27.2,90.5 24.8,89.5 22,89ZM127.8,89.9 127.8,94.4 128.1,95.2 128.9,95.6 151.4,95.6 152.1,95.4 152.6,94.8 152.8,90.1 152.5,89.2 151.6,88.8 128.8,88.8 128,89.2ZM89.5,88.9 88.9,89.8 88.9,94.4 89.4,95.4 90,95.6 100,95.6 102.2,96.1 103.5,96.9 104.6,98.1 105.5,100.1 105.9,102 105.9,108.1 105.4,110.4 104.4,112.9 102.5,115.6 95.6,122.6 94.2,124.5 93.4,126.4 93,128.1 93,130.5 94,134.1 107.1,156.5 108.5,157.5 115.6,157.5 116.2,156.9 115.9,155.8 103.2,135.1 101.1,131.1 100.8,129.8 100.9,128.1 101.6,126.8 109.4,118.4 111.6,115 112.4,113.2 113.2,109.9 113.6,106.6 113.5,100 112.6,95.9 111.6,93.8 110,91.8 108.4,90.5 105.4,89.2 102.2,88.8ZM46.5,88.8 45.9,89 45.4,89.6 45.4,137.4 45.6,144.4 46.2,148.1 47.1,150.6 48.9,153.5 50.6,155.2 52.8,156.6 55.5,157.6 57.9,158 62.5,158 64.9,157.6 68.6,156 71.4,153.5 72.6,151.6 73.5,149.6 74.5,145.4 74.9,132 74.9,89.8 74.6,89.1 74,88.8 68.4,88.8 67.8,89 67.2,89.9 67.2,141.9 67,144.4 66.1,147.4 64.5,149.6 62.1,150.9 59.2,151 57.5,150.6 55.4,149.1 54.1,147.1 53.2,143.5 53,139.1 53,89.8 52.8,89.1 52.1,88.8ZM135.1,7.1 131.4,8.1 129.1,9.2 126.9,10.9 124.4,13.5 122.4,17 121.8,18.9 121.1,22.4 121.2,25.4 122,28.6 123.1,31.1 125.1,34 127.4,36.1 129.6,37.6 132.6,38.9 135.6,39.5 139.2,39.5 142.2,38.9 145.2,37.6 148.2,35.5 150.2,33.4 151.8,31.1 153,28.1 153.6,25.4 153.6,21.2 152.8,17.6 151.5,15 149.9,12.8 147.2,10.2 145.8,9.2 142,7.6 139.8,7.1ZM51.8,7 50.9,7.2 50.4,7.8 50.2,12.2 50.4,13 50.9,13.6 51.6,13.9 62.2,13.9 64.5,14.4 65.8,15.1 66.9,16.4 67.6,18.2 68,20.8 67.8,27.5 66.9,30.5 65.8,32.8 63.1,36.2 58.2,41.1 54.8,45.2 53.2,47.8 52,51.5 51.8,53.4 51.8,75.1 52.6,75.9 58.4,75.9 59.2,75 59.2,54.9 59.8,52 60.8,49.6 61.8,48.1 70.4,39 72.8,35.6 73.9,33.4 74.9,30.2 75.5,26.5 75.6,18.9 74.8,14.1 73.8,11.9 72.1,9.9 69.8,8.2 65.5,7.1ZM31,7 30.2,7.2 29.5,8 20.5,27.6 20.1,29.1 20.2,37.2 21.2,41.6 30.6,75 31.6,75.9 38.1,75.9 38.8,75.4 38.8,74.4 28.1,37.5 27.4,33.6 27.4,31.4 28,28.8 37.9,7.8 37.4,7.1ZM8.9,7 8,7.2 7.5,7.9 7.5,75 8.4,75.9 14.2,75.9 14.9,75.4 15.1,74.6 15.1,8.2 14.9,7.5 13.9,7Z"/></symbol>
+<symbol id="i-l" viewBox="0 0 20 20"><path d="M12.5 4 6.5 10l6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+<symbol id="i-p" viewBox="0 0 20 20"><path d="M7.5 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+<symbol id="i-tel" viewBox="0 0 22 22"><path d="M6.2 2.8h3.1l1.4 4.6-2 1.5a10.6 10.6 0 0 0 4.4 4.4l1.5-2 4.6 1.4v3.1c0 1-.8 1.8-1.8 1.8A15 15 0 0 1 4.4 4.6c0-1 .8-1.8 1.8-1.8Z" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+<symbol id="i-mail" viewBox="0 0 22 22"><path d="M3 5.5h16v11H3z M3 6l8 6.2L19 6" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+<symbol id="i-pin" viewBox="0 0 22 22"><circle cx="11" cy="9" r="2.6" fill="currentColor"/><path d="M11 19.5s-6-5.6-6-10.5a6 6 0 0 1 12 0c0 4.9-6 10.5-6 10.5Z" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+</defs></svg>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="#start" aria-label="KP Pure Form - strona główna"><svg viewBox="0 0 161 247" role="img" aria-label="KP Pure Form"><use href="#logo"/></svg><span>Projektowanie<br>wnętrz i ogrodów</span></a>
+    <a class="ikt" href="tel:+48608450910" aria-label="Zadzwoń: 608 450 910"><svg><use href="#i-tel"/></svg></a>
+    <button class="burger" id="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+    <nav class="menu" id="menu" aria-label="Menu główne">
+      <a href="#galezie">Wnętrza i ogrody</a>
+      <a href="#projekty">Projekty</a>
+      <a href="#oferta">Oferta</a>
+      <a href="#wspolpraca">Współpraca</a>
+      <a href="#o-mnie">O mnie</a>
+      <a class="tel" href="tel:+48608450910">608 450 910</a>
+      <a class="btn" href="#kontakt"><span class="kr"></span>Zapytaj o projekt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="tresc">
+<section class="hero" id="start" aria-label="KP Pure Form">
+  <div class="foty">
+    <div class="pol w">
+      <picture>
+        <source media="(max-width:860px)" srcset="img/hwm-480.webp 480w, img/hwm-800.webp 800w" sizes="100vw">
+        <img src="img/hw-820.webp" srcset="img/hw-560.webp 560w, img/hw-820.webp 820w, img/hw-1000.webp 1000w" sizes="50vw" width="994" height="1080" alt="Projekt wnętrza: jadalnia z kuchnią i dużym oknem na ogród, Tarnowskie Góry" fetchpriority="high">
+      </picture>
+      <a class="etk" href="#galezie"><span class="kr"></span>Wnętrza</a>
+    </div>
+    <div class="pol o">
+      <picture>
+        <source media="(max-width:860px)" srcset="img/hom-480.webp 480w, img/hom-800.webp 800w" sizes="100vw">
+        <img src="img/ho-820.webp" srcset="img/ho-560.webp 560w, img/ho-820.webp 820w, img/ho-1000.webp 1000w" sizes="50vw" width="966" height="1050" alt="Projekt ogrodu: miejski ogródek z drewnianym podestem i rabatą traw, Gliwice" fetchpriority="high">
+      </picture>
+      <a class="etk" href="#galezie-o"><span class="kr"></span>Ogrody</a>
+    </div>
+  </div>
+  <div class="hero-in">
+    <span class="slonce" aria-hidden="true"></span>
+    <h1>Projektowanie wnętrz i ogrodów - dom otwarty na ogród</h1>
+    <p class="opis">Słońce, przestrzeń, zieleń. Projektuję wnętrza i ogrody jako jedną całość - w Tarnowskich Górach, na Śląsku i online.</p>
+    <a class="btn jasny" href="#kontakt"><span class="kr"></span>Opisz swój projekt</a>
+  </div>
+</section>
+
+<section class="sek" id="galezie">
+  <div class="wrap">
+    <h2>Jedna pracownia, dwie przestrzenie</h2>
+    <p class="lead">Jestem zwolenniczką otwierania domu na ogród i przenikania się tych dwóch przestrzeni. Dlatego najbardziej lubię projektować kompleksowo - wnętrze i ogród wokół niego. Można też zamówić tylko jedno z nich.</p>
+    <div class="galezie">
+      <article class="gal w">
+        <a class="foto" href="#projekty" tabindex="-1" aria-hidden="true"><img src="img/gw-900.webp" srcset="img/gw-600.webp 600w, img/gw-900.webp 900w, img/gw-1200.webp 1200w" sizes="(max-width:860px) 92vw, 44vw" width="1200" height="960" alt="" loading="lazy" decoding="async"></a>
+        <h3><span class="kr"></span>Wnętrza</h3>
+        <p>Domy, mieszkania i biura. Naturalne kolory i materiały, umiar i ponadczasowa forma - wnętrza, które koją zmysły i dobrze się w nich żyje.</p>
+        <a class="dalej" href="#projekty">Zobacz projekty wnętrz</a>
+      </article>
+      <div class="prog" aria-hidden="true"></div>
+      <article class="gal o" id="galezie-o">
+        <a class="foto" href="#projekty" tabindex="-1" aria-hidden="true"><img src="img/go-900.webp" srcset="img/go-600.webp 600w, img/go-900.webp 900w, img/go-1200.webp 1200w" sizes="(max-width:860px) 92vw, 44vw" width="1200" height="960" alt="" loading="lazy" decoding="async"></a>
+        <h3><span class="kr"></span>Ogrody</h3>
+        <p>Ogrody i rabaty, w których zieleń zaczyna się tuż za oknem salonu. Od konsultacji, przez projekt rabaty, po pełny projekt ogrodu z małą architekturą.</p>
+        <a class="dalej" href="#oferta">Zakres projektu ogrodu</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sek szary" id="projekty">
+  <div class="pas">
+    <div class="glowa">
+      <div>
+        <h2>Projekty</h2>
+        <p>Wizualizacje z ostatnich projektów: mieszkania, domy, pokoje dzieci i miejski ogródek. Zdjęcia przesuwa się palcem albo myszą, a po kliknięciu można je powiększyć.</p>
+      </div>
+      <div class="strz" data-nav="tor-proj"><button type="button" data-k="-1" aria-label="Poprzednie projekty"><svg><use href="#i-l"/></svg></button><button type="button" data-k="1" aria-label="Następne projekty"><svg><use href="#i-p"/></svg></button></div>
+    </div>
+    <div class="tor" id="tor-proj" data-tor>
+      <article class="kar" data-grupa>
+        <div class="okno"><div class="slajdy" data-tor><button type="button" data-lb="img/sj1-lb-1600.webp" aria-label="Powiększ: Soft japandi, salon z jadalnią"><img src="img/sj1-560.webp" srcset="img/sj1-560.webp 560w, img/sj1-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Soft japandi, Gliwice - salon z jadalnią" loading="lazy" decoding="async"></button><button type="button" data-lb="img/sj2-lb-1600.webp" aria-label="Powiększ: Soft japandi, kuchnia z wyspą"><img src="img/sj2-560.webp" srcset="img/sj2-560.webp 560w, img/sj2-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Soft japandi, Gliwice - kuchnia z wyspą" loading="lazy" decoding="async"></button><button type="button" data-lb="img/sj3-lb-1600.webp" aria-label="Powiększ: Soft japandi, kuchnia, zabudowa"><img src="img/sj3-560.webp" srcset="img/sj3-560.webp 560w, img/sj3-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Soft japandi, Gliwice - kuchnia, zabudowa" loading="lazy" decoding="async"></button><button type="button" data-lb="img/sj4-lb-1600.webp" aria-label="Powiększ: Soft japandi, strefa dzienna z TV"><img src="img/sj4-560.webp" srcset="img/sj4-560.webp 560w, img/sj4-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Soft japandi, Gliwice - strefa dzienna z TV" loading="lazy" decoding="async"></button></div><span class="nr">1/4</span><button class="pk l" type="button" aria-label="Poprzednie zdjęcie" disabled><svg><use href="#i-l"/></svg></button><button class="pk p" type="button" aria-label="Następne zdjęcie"><svg><use href="#i-p"/></svg></button></div>
+        <div class="opis"><h3>Soft japandi</h3><p class="typ"><span class="kr"></span>Wnętrze · Gliwice</p></div>
+      </article>
+      <article class="kar ogrod" data-grupa>
+        <div class="okno"><div class="slajdy" data-tor><button type="button" data-lb="img/og1-lb-1600.webp" aria-label="Powiększ: Ogródek miejski z podestem, ogród za dnia: podest, trawy i lawenda"><img src="img/og1-560.webp" srcset="img/og1-560.webp 560w, img/og1-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Ogródek miejski z podestem, Gliwice - ogród za dnia: podest, trawy i lawenda" loading="lazy" decoding="async"></button><button type="button" data-lb="img/og2-lb-1600.webp" aria-label="Powiększ: Ogródek miejski z podestem, ten sam ogród wieczorem, z oświetleniem"><img src="img/og2-560.webp" srcset="img/og2-560.webp 560w, img/og2-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Ogródek miejski z podestem, Gliwice - ten sam ogród wieczorem, z oświetleniem" loading="lazy" decoding="async"></button></div><span class="nr">1/2</span><button class="pk l" type="button" aria-label="Poprzednie zdjęcie" disabled><svg><use href="#i-l"/></svg></button><button class="pk p" type="button" aria-label="Następne zdjęcie"><svg><use href="#i-p"/></svg></button></div>
+        <div class="opis"><h3>Ogródek miejski z podestem</h3><p class="typ"><span class="kr"></span>Ogród · Gliwice</p></div>
+      </article>
+      <article class="kar" data-grupa>
+        <div class="okno"><div class="slajdy" data-tor><button type="button" data-lb="img/bb1-lb-1600.webp" aria-label="Powiększ: Beige & black, salon z czarną sofą"><img src="img/bb1-560.webp" srcset="img/bb1-560.webp 560w, img/bb1-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Beige & black, Tarnowskie Góry - salon z czarną sofą" loading="lazy" decoding="async"></button><button type="button" data-lb="img/bb2-lb-1600.webp" aria-label="Powiększ: Beige & black, kuchnia z oknem narożnym"><img src="img/bb2-560.webp" srcset="img/bb2-560.webp 560w, img/bb2-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Beige & black, Tarnowskie Góry - kuchnia z oknem narożnym" loading="lazy" decoding="async"></button><button type="button" data-lb="img/bb3-lb-1600.webp" aria-label="Powiększ: Beige & black, łazienka z wanną wolnostojącą"><img src="img/bb3-560.webp" srcset="img/bb3-560.webp 560w, img/bb3-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Beige & black, Tarnowskie Góry - łazienka z wanną wolnostojącą" loading="lazy" decoding="async"></button><button type="button" data-lb="img/bb4-lb-1600.webp" aria-label="Powiększ: Beige & black, sypialnia"><img src="img/bb4-560.webp" srcset="img/bb4-560.webp 560w, img/bb4-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Beige & black, Tarnowskie Góry - sypialnia" loading="lazy" decoding="async"></button><button type="button" data-lb="img/bb5-lb-1600.webp" aria-label="Powiększ: Beige & black, salon z jadalnią i schodami"><img src="img/bb5-560.webp" srcset="img/bb5-560.webp 560w, img/bb5-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Beige & black, Tarnowskie Góry - salon z jadalnią i schodami" loading="lazy" decoding="async"></button></div><span class="nr">1/5</span><button class="pk l" type="button" aria-label="Poprzednie zdjęcie" disabled><svg><use href="#i-l"/></svg></button><button class="pk p" type="button" aria-label="Następne zdjęcie"><svg><use href="#i-p"/></svg></button></div>
+        <div class="opis"><h3>Beige & black</h3><p class="typ"><span class="kr"></span>Wnętrze · Tarnowskie Góry</p></div>
+      </article>
+      <article class="kar" data-grupa>
+        <div class="okno"><div class="slajdy" data-tor><button type="button" data-lb="img/jm1-lb-1600.webp" aria-label="Powiększ: Japandi minimal, salon w ciepłym minimalizmie"><img src="img/jm1-560.webp" srcset="img/jm1-560.webp 560w, img/jm1-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Japandi minimal, Tarnowskie Góry - salon w ciepłym minimalizmie" loading="lazy" decoding="async"></button><button type="button" data-lb="img/jm2-lb-1600.webp" aria-label="Powiększ: Japandi minimal, salon z biblioteczką"><img src="img/jm2-560.webp" srcset="img/jm2-560.webp 560w, img/jm2-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Japandi minimal, Tarnowskie Góry - salon z biblioteczką" loading="lazy" decoding="async"></button><button type="button" data-lb="img/jm3-lb-1600.webp" aria-label="Powiększ: Japandi minimal, kuchnia z jadalnią"><img src="img/jm3-560.webp" srcset="img/jm3-560.webp 560w, img/jm3-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Japandi minimal, Tarnowskie Góry - kuchnia z jadalnią" loading="lazy" decoding="async"></button><button type="button" data-lb="img/jm4-lb-1600.webp" aria-label="Powiększ: Japandi minimal, łazienka"><img src="img/jm4-560.webp" srcset="img/jm4-560.webp 560w, img/jm4-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1208" height="994" alt="Japandi minimal, Tarnowskie Góry - łazienka" loading="lazy" decoding="async"></button></div><span class="nr">1/4</span><button class="pk l" type="button" aria-label="Poprzednie zdjęcie" disabled><svg><use href="#i-l"/></svg></button><button class="pk p" type="button" aria-label="Następne zdjęcie"><svg><use href="#i-p"/></svg></button></div>
+        <div class="opis"><h3>Japandi minimal</h3><p class="typ"><span class="kr"></span>Wnętrze · Tarnowskie Góry</p></div>
+      </article>
+      <article class="kar" data-grupa>
+        <div class="okno"><div class="slajdy" data-tor><button type="button" data-lb="img/mt1-lb-1600.webp" aria-label="Powiększ: Minimalistyczne mieszkanie, salon z aneksem"><img src="img/mt1-560.webp" srcset="img/mt1-560.webp 560w, img/mt1-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Minimalistyczne mieszkanie, Tychy - salon z aneksem" loading="lazy" decoding="async"></button><button type="button" data-lb="img/mt2-lb-1600.webp" aria-label="Powiększ: Minimalistyczne mieszkanie, strefa TV"><img src="img/mt2-560.webp" srcset="img/mt2-560.webp 560w, img/mt2-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Minimalistyczne mieszkanie, Tychy - strefa TV" loading="lazy" decoding="async"></button><button type="button" data-lb="img/mt3-lb-1600.webp" aria-label="Powiększ: Minimalistyczne mieszkanie, kuchnia"><img src="img/mt3-560.webp" srcset="img/mt3-560.webp 560w, img/mt3-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Minimalistyczne mieszkanie, Tychy - kuchnia" loading="lazy" decoding="async"></button><button type="button" data-lb="img/mt4-lb-1600.webp" aria-label="Powiększ: Minimalistyczne mieszkanie, garderoba"><img src="img/mt4-560.webp" srcset="img/mt4-560.webp 560w, img/mt4-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Minimalistyczne mieszkanie, Tychy - garderoba" loading="lazy" decoding="async"></button></div><span class="nr">1/4</span><button class="pk l" type="button" aria-label="Poprzednie zdjęcie" disabled><svg><use href="#i-l"/></svg></button><button class="pk p" type="button" aria-label="Następne zdjęcie"><svg><use href="#i-p"/></svg></button></div>
+        <div class="opis"><h3>Minimalistyczne mieszkanie</h3><p class="typ"><span class="kr"></span>Mieszkanie · Tychy</p></div>
+      </article>
+      <article class="kar" data-grupa>
+        <div class="okno"><div class="slajdy" data-tor><button type="button" data-lb="img/cb1-lb-1600.webp" aria-label="Powiększ: Cozy beige, salon z jadalnią"><img src="img/cb1-560.webp" srcset="img/cb1-560.webp 560w, img/cb1-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Cozy beige, Tarnowskie Góry - salon z jadalnią" loading="lazy" decoding="async"></button><button type="button" data-lb="img/cb2-lb-1600.webp" aria-label="Powiększ: Cozy beige, salon, widok na okno"><img src="img/cb2-560.webp" srcset="img/cb2-560.webp 560w, img/cb2-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Cozy beige, Tarnowskie Góry - salon, widok na okno" loading="lazy" decoding="async"></button><button type="button" data-lb="img/cb3-lb-1600.webp" aria-label="Powiększ: Cozy beige, sypialnia"><img src="img/cb3-560.webp" srcset="img/cb3-560.webp 560w, img/cb3-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Cozy beige, Tarnowskie Góry - sypialnia" loading="lazy" decoding="async"></button><button type="button" data-lb="img/cb4-lb-1600.webp" aria-label="Powiększ: Cozy beige, przedpokój"><img src="img/cb4-560.webp" srcset="img/cb4-560.webp 560w, img/cb4-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Cozy beige, Tarnowskie Góry - przedpokój" loading="lazy" decoding="async"></button></div><span class="nr">1/4</span><button class="pk l" type="button" aria-label="Poprzednie zdjęcie" disabled><svg><use href="#i-l"/></svg></button><button class="pk p" type="button" aria-label="Następne zdjęcie"><svg><use href="#i-p"/></svg></button></div>
+        <div class="opis"><h3>Cozy beige</h3><p class="typ"><span class="kr"></span>Mieszkanie · Tarnowskie Góry</p></div>
+      </article>
+      <article class="kar" data-grupa>
+        <div class="okno"><div class="slajdy" data-tor><button type="button" data-lb="img/pc1-lb-1600.webp" aria-label="Powiększ: Pokój chłopca, pokój z łóżkiem i biurkiem"><img src="img/pc1-560.webp" srcset="img/pc1-560.webp 560w, img/pc1-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Pokój chłopca, Tarnowskie Góry - pokój z łóżkiem i biurkiem" loading="lazy" decoding="async"></button><button type="button" data-lb="img/pc2-lb-1600.webp" aria-label="Powiększ: Pokój chłopca, ściana z rysunkiem koszykarza"><img src="img/pc2-560.webp" srcset="img/pc2-560.webp 560w, img/pc2-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Pokój chłopca, Tarnowskie Góry - ściana z rysunkiem koszykarza" loading="lazy" decoding="async"></button><button type="button" data-lb="img/pc3-lb-1600.webp" aria-label="Powiększ: Pokój chłopca, regał na piłki"><img src="img/pc3-560.webp" srcset="img/pc3-560.webp 560w, img/pc3-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Pokój chłopca, Tarnowskie Góry - regał na piłki" loading="lazy" decoding="async"></button></div><span class="nr">1/3</span><button class="pk l" type="button" aria-label="Poprzednie zdjęcie" disabled><svg><use href="#i-l"/></svg></button><button class="pk p" type="button" aria-label="Następne zdjęcie"><svg><use href="#i-p"/></svg></button></div>
+        <div class="opis"><h3>Pokój chłopca</h3><p class="typ"><span class="kr"></span>Wnętrze · Tarnowskie Góry</p></div>
+      </article>
+      <article class="kar" data-grupa>
+        <div class="okno"><div class="slajdy" data-tor><button type="button" data-lb="img/pd1-lb-1600.webp" aria-label="Powiększ: Pokój dziewczynki, łóżko-domek i baldachim"><img src="img/pd1-560.webp" srcset="img/pd1-560.webp 560w, img/pd1-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Pokój dziewczynki, Tarnowskie Góry - łóżko-domek i baldachim" loading="lazy" decoding="async"></button><button type="button" data-lb="img/pd2-lb-1600.webp" aria-label="Powiększ: Pokój dziewczynki, kącik z biurkiem"><img src="img/pd2-560.webp" srcset="img/pd2-560.webp 560w, img/pd2-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Pokój dziewczynki, Tarnowskie Góry - kącik z biurkiem" loading="lazy" decoding="async"></button><button type="button" data-lb="img/pd3-lb-1600.webp" aria-label="Powiększ: Pokój dziewczynki, ściana z ilustracją"><img src="img/pd3-560.webp" srcset="img/pd3-560.webp 560w, img/pd3-860.webp 860w" sizes="(min-width:1700px) 24vw, (min-width:1280px) 31vw, (min-width:1000px) 41vw, (min-width:700px) 66vw, 84vw" width="1440" height="1080" alt="Pokój dziewczynki, Tarnowskie Góry - ściana z ilustracją" loading="lazy" decoding="async"></button></div><span class="nr">1/3</span><button class="pk l" type="button" aria-label="Poprzednie zdjęcie" disabled><svg><use href="#i-l"/></svg></button><button class="pk p" type="button" aria-label="Następne zdjęcie"><svg><use href="#i-p"/></svg></button></div>
+        <div class="opis"><h3>Pokój dziewczynki</h3><p class="typ"><span class="kr"></span>Wnętrze · Tarnowskie Góry</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="ciemna" id="o-mnie">
+  <div class="foto"><img src="img/ds-1100.webp" srcset="img/ds-700.webp 700w, img/ds-1100.webp 1100w" sizes="(max-width:860px) 100vw, 52vw" width="1100" height="619" alt="Projekt salonu z jadalnią w ciepłym minimalizmie, Tarnowskie Góry" loading="lazy" decoding="async"></div>
+  <div class="tekst">
+    <blockquote>Projektując otoczenie, projektujemy nastrój.</blockquote>
+    <div class="slow" aria-label="Słońce, przestrzeń, zieleń"><span class="kr"></span>Słońce<span class="kr"></span>Przestrzeń<span class="kr z"></span>Zieleń</div>
+    <p>KP Pure Form to autorska pracownia. Projektuję naturalne, funkcjonalne wnętrza i ogrody, w których w centrum jest samopoczucie domowników. Unikam nadmiaru bodźców: prosta, wyrazista forma, naturalne kolory i materiały, ciepły minimalizm z odrobiną szaleństwa.</p>
+    <p>Wizualizacje wykonuję sama, nie podzlecam ich na zewnątrz. Wyznacznikiem każdego projektu są potrzeby klientów: styl życia, przyzwyczajenia, preferencje i budżet.</p>
+    <p class="podpis">Katarzyna Piotrowiak<small>KP Pure Form, Tarnowskie Góry</small></p>
+  </div>
+</section>
+
+<section class="sek" id="oferta">
+  <div class="wrap">
+    <div class="glowa"><div><h2>Zakres projektu</h2><p>Konsultacje, projekty rabat, ogrodów i wnętrz wyceniam indywidualnie, po poznaniu metrażu, lokalizacji i potrzeb.</p></div></div>
+    <div class="oferta">
+      <div class="kol w">
+        <h3><span class="kr"></span>Wnętrza</h3>
+        <div class="zakres">
+          <h4>Projekt koncepcyjny</h4>
+          <p class="dla">Dla osób, które miały już styczność z wykańczaniem wnętrz i same ustalą szczegóły techniczne z wykonawcami. Niższy koszt, pełny obraz wnętrza.</p>
+          <ul class="kropki">
+            <li>Układ funkcjonalny w rzutach 2D i rzut aranżacyjny z opisem</li>
+            <li>Fotorealistyczne wizualizacje 3D</li>
+            <li>Lista najważniejszych zakupów z odnośnikami do sklepów</li>
+          </ul>
+        </div>
+        <div class="zakres">
+          <h4>Projekt wykonawczy</h4>
+          <p class="dla">Wszystko, czego potrzeba do realizacji - dla tych, którzy nie chcą odpowiadać na setki pytań ekipy wykończeniowej i stolarza.</p>
+          <ul class="kropki">
+            <li>Zakres projektu koncepcyjnego</li>
+            <li>Rysunki wykonawcze: elektryka, wod.-kan., sufity, zabudowy GK, meble na wymiar, podłogi, łazienki, kolorystyka ścian</li>
+            <li>Zestawienie ilościowe materiałów i wyposażenia z cenami oraz wstępny kosztorys</li>
+            <li>Wspólna wizyta w wybranym salonie, np. z płytkami</li>
+          </ul>
+        </div>
+        <p class="inf">Dla mieszkania ok. 60 m²: projekt koncepcyjny ok. 30 dni roboczych, wykonawczy ok. 60 dni roboczych.</p>
+      </div>
+      <div class="kol o">
+        <h3><span class="kr"></span>Ogrody</h3>
+        <div class="zakres">
+          <h4>Konsultacja</h4>
+          <p class="dla">Całość ogrodu albo wskazane miejsca: rozplanowanie przestrzeni, ścieżek i stref.</p>
+        </div>
+        <div class="zakres">
+          <h4>Projekt rabaty</h4>
+          <ul class="kropki">
+            <li>Rzut 2D z wymiarami rabaty i rozmieszczeniem roślin, dzięki któremu samodzielnie wykonasz nasadzenia</li>
+            <li>Sposób sadzenia, pielęgnacja i terminy cięcia</li>
+            <li>Spis roślin i wizualizacja charakteru nasadzeń</li>
+          </ul>
+        </div>
+        <div class="zakres">
+          <h4>Projekt ogrodu</h4>
+          <ul class="kropki">
+            <li>Moodboard i wizualizacja wybranego fragmentu ogrodu</li>
+            <li>Rzuty 2D: koncepcja, strefy, rabaty, ścieżki, drzewa, krzewy, byliny i trawy</li>
+            <li>Specyfikacja roślin z okresem kwitnienia i instrukcją pielęgnacji</li>
+            <li>Koncepcje małej architektury do indywidualnego wykonania</li>
+          </ul>
+        </div>
+        <p class="inf">Dla samodzielnych: gotowe projekty rabat modułowych w formie e-booków, które można skracać, powielać i dopasować do swojego miejsca.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sek szary" id="wspolpraca">
+  <div class="wrap">
+    <div class="glowa"><div><h2>Jak przebiega współpraca</h2><p>Cały proces jest podzielony na etapy, dzięki czemu w odpowiednim momencie podejmujesz świadome decyzje.</p></div></div>
+    <ol class="etapy">
+      <li><h3>Ustalenia i wymagania</h3><p>Zakres, rzuty lub inwentaryzacja na Śląsku, rozmowa o estetyce, budżecie i codziennych nawykach.</p></li>
+      <li><h3>Układ funkcjonalny</h3><p>2-3 propozycje w rzutach 2D. Wybieramy jedną albo łączymy najlepsze.</p></li>
+      <li><h3>Wstępny szkic budżetu</h3><p>Orientacyjne wyliczenie kosztów, żeby od początku było wiadomo, na co można sobie pozwolić.</p></li>
+      <li><h3>Koncepcja wykończeniowa</h3><p>Kolory, materiały i wyposażenie dobierane od razu na widokach 3D, nie na moodboardach.</p></li>
+      <li><h3>Wizualizacje 3D</h3><p>Fotorealistyczne obrazy z dbałością o światło, odbicia i tekstury.</p></li>
+      <li><h3>Ostateczny wybór materiałów</h3><p>Zestawienie elementów projektu w ramach budżetu, w wykonawczym także wybór na żywo.</p></li>
+    </ol>
+    <div class="fakty">
+      <p><span class="kr"></span>Projekty na Śląsku (m.in. Gliwice, Katowice, Chorzów, Bytom, Tarnowskie Góry), w innych rejonach Polski i online.</p>
+      <p><span class="kr"></span>Na początek możesz umówić bezpłatną rozmowę wideo albo napisać przez formularz poniżej.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sek" id="kontakt">
+  <div class="wrap kontakt">
+    <div>
+      <h2>Opowiedz o swoim wnętrzu albo ogrodzie</h2>
+      <div class="dane">
+        <a href="tel:+48608450910"><svg><use href="#i-tel"/></svg>608 450 910</a>
+        <a href="mailto:kontakt@kppureform.pl"><svg><use href="#i-mail"/></svg>kontakt@kppureform.pl</a>
+        <span><svg><use href="#i-pin"/></svg>Tarnowskie Góry, woj. śląskie</span>
+      </div>
+      <div class="wycena">
+        <h3>Do wyceny przydadzą się:</h3>
+        <ul class="kropki">
+          <li>rzut budowlany z zaznaczonymi pomieszczeniami lub plan działki</li>
+          <li>lokalizacja inwestycji i jej stan (deweloperski, budowa, remont)</li>
+          <li>3 inspiracje, które Ci się podobają</li>
+          <li>terminy, np. wejście ekipy albo odbiór mieszkania</li>
+          <li>zakres: projekt koncepcyjny czy wykonawczy</li>
+        </ul>
+      </div>
+    </div>
+    <form id="form" novalidate>
+      <h3>Zapytanie o projekt</h3>
+      <div class="pola">
+        <div class="cala">
+          <label id="l-czego">Czego dotyczy projekt?</label>
+          <div class="wybor" role="radiogroup" aria-labelledby="l-czego">
+            <label><input type="radio" name="czego" value="wnetrze" checked><span>Wnętrze</span></label>
+            <label><input type="radio" name="czego" value="ogrod"><span>Ogród</span></label>
+            <label><input type="radio" name="czego" value="oba"><span>Wnętrze i ogród</span></label>
+          </div>
+        </div>
+        <div><label for="f-imie">Imię i nazwisko</label><input id="f-imie" name="imie" autocomplete="name" required></div>
+        <div><label for="f-tel">Telefon</label><input id="f-tel" name="tel" type="tel" autocomplete="tel"></div>
+        <div class="cala"><label for="f-mail">E-mail</label><input id="f-mail" name="mail" type="email" autocomplete="email" required></div>
+        <div class="cala"><label for="f-msg">Kilka słów o projekcie</label><textarea id="f-msg" name="msg" placeholder="Np. mieszkanie 60 m² w Gliwicach, stan deweloperski"></textarea></div>
+        <label class="zgoda cala"><input type="checkbox" required> Zgadzam się na kontakt w sprawie zapytania.</label>
+      </div>
+      <button class="btn" type="submit"><span class="kr"></span>Wyślij zapytanie</button>
+      <p class="pokaz">To podgląd strony - formularz nie wysyła jeszcze wiadomości.</p>
+      <p class="ok" id="msg" hidden role="status">Dziękuję! W docelowej stronie wiadomość trafi na kontakt@kppureform.pl.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="stopka">
+  <div class="wrap">
+    <div class="st">
+      <div class="pierw"><svg class="lg" viewBox="0 0 161 247" role="img" aria-label="KP Pure Form"><use href="#logo"/></svg><p>Pracownia projektowania wnętrz i ogrodów. Katarzyna Piotrowiak, Tarnowskie Góry.</p></div>
+      <div><h4>Pracownia</h4><ul><li><a href="#galezie">Wnętrza i ogrody</a></li><li><a href="#projekty">Projekty</a></li><li><a href="#oferta">Oferta</a></li><li><a href="#wspolpraca">Współpraca</a></li></ul></div>
+      <div><h4>Kontakt</h4><ul><li><a href="tel:+48608450910">608 450 910</a></li><li><a href="mailto:kontakt@kppureform.pl">kontakt@kppureform.pl</a></li><li>Tarnowskie Góry</li></ul></div>
+      <div><h4>Obserwuj</h4><ul><li><a href="https://www.instagram.com/kppureform/" rel="noopener" target="_blank">Instagram - wnętrza</a></li><li><a href="https://www.instagram.com/gardenroom.kp/" rel="noopener" target="_blank">Instagram - ogród</a></li><li><a href="https://www.facebook.com/kppureform/" rel="noopener" target="_blank">Facebook</a></li><li><a href="https://www.pinterest.com/kppureform/" rel="noopener" target="_blank">Pinterest</a></li></ul></div>
+    </div>
+    <div class="dol"><span>© <span id="rok">2026</span> KP Pure Form Katarzyna Piotrowiak</span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=kppureform.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a></div>
+  </div>
+</footer>
+
+<nav class="mob" id="mob" aria-label="Szybki kontakt"><a href="tel:+48608450910"><svg><use href="#i-tel"/></svg>Zadzwoń</a><a href="#kontakt"><span class="kr"></span>Zapytaj o projekt</a></nav>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+  <img alt="">
+  <p></p>
+  <button class="x" type="button" aria-label="Zamknij"><svg viewBox="0 0 20 20"><path d="M4 4l12 12M16 4 4 16" stroke="currentColor" stroke-width="1.8"/></svg></button>
+  <button class="p" type="button" aria-label="Poprzednie zdjęcie"><svg><use href="#i-l"/></svg></button>
+  <button class="n" type="button" aria-label="Następne zdjęcie"><svg><use href="#i-p"/></svg></button>
+</div>
+<script src="app.js" defer></script>
+</body>
+</html>
